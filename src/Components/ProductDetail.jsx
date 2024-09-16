@@ -5,6 +5,7 @@ import { FaShoppingCart } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../Redux/Slices/cartSlice";
 import Loading from "../UI/Loading";
+import Error from "../UI/Error";
 
 export default function ProductDetail() {
   const { id } = useParams();
@@ -27,8 +28,13 @@ export default function ProductDetail() {
 
   // Render different UI based on loading, error, or product data availability
   if (loading) return <Loading />;
-  if (error) return <div>Error: {error}</div>;
-  if (!product) return <div>No product found</div>;
+  if (error) return <Error />;
+  if (!product)
+    return (
+      <div className="h-[calc(100vh-4rem)] flex justify-center items-center text-2xl text-slate-600">
+        No product found🥲
+      </div>
+    );
 
   return (
     <div className="flex flex-col justify-center items-center md:flex-row gap-4 px-5 lg:px-10 py-10">

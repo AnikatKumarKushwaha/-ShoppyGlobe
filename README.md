@@ -53,3 +53,5 @@ The ShoppyGlobe project is a full-featured e-commerce application using React, f
 - [Git hub link](https://github.com/AnikatKumarKushwaha/-ShoppyGlobe)
 
 ### Vercel link
+
+- [Vercel link](https://shoppy-globe-mu.vercel.app/)
